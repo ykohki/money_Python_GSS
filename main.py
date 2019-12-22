@@ -56,7 +56,7 @@ def handle_message(event):
 
     wks.update_acell('A1', 'Hello World!')
     
-    wks.update_acell('A2', event)
+    wks.update_acell('A2', event.message.text)
     
     #練習
     #入力された情報を返してみる
