@@ -11,6 +11,9 @@ from linebot.models import (
 )
 import os
 
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+
 app = Flask(__name__)
 
 #環境変数取得
@@ -40,9 +43,19 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text=event.message.text))
+#    line_bot_api.reply_message(
+#        event.reply_token,
+#        TextSendMessage(text=event.message.text))
+
+    scope = ['https://spreadsheets.google.com/feeds',
+            'https://www.googleapis.com/auth/drive']
+
+    credentials = ServiceAccountCredentials.from_json_keyfile_name('money-line-python-638e48c935e8.json', scope)
+    gc = gspread.authorize(credentials)
+    wks = gc.open('money_LINE_python').sheet1
+
+    wks.update_acell('A1', 'Hello World!')
+    print(wks.acell('A1'))
 
 
 if __name__ == "__main__":
