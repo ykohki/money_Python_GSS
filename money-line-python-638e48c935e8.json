@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "money-line-python",
+  "private_key_id": "638e48c935e8f2b8d70ebbc29a4371550125d6c1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCujZSW2IG8aesY\n6SrPof6dYQ/2SpGNWn7NuKyfXQk6HXZQEWSxTdKxY6fBQAIaOrbbDgoYGWBFwJrw\nS8FY+epzo8VdjMEI9yCQbgvctVpCYJpCvb5ayrxmLvakugCRVensfZ06z9/KmmuE\nSVL8e5dkCYb/KISXNNDQ8vb8uNLSdqpZAHdhUN4/66OWvrJnelybIQ8m135ASJC/\n3s3UrAWVYXA8VtOHNuVUwr38+1/73HivrF06hNUS3DlMtvh5aapNv96gOrTdbifB\nJ2yQ9xXX4IFbzoabgcUJcpK4QsP52Twdrb++X4RzO4QmhaijzUBPUg0TPucD75yF\nlENuAQdZAgMBAAECggEABMc3ZBG1K3UyzFHFrD1g/OnlR/aumVH62qLNhudDE2Yv\nEO4I9ZmNxPFXbEDWTeWBj+mIeTRooEAvfZh1SHw+4L+A7ZimyBoLuChrBrWoLNz8\nHAuZpF6cXae3dLbqwQ+7AZBGt49tLtyfSNXBAcxYTpK8MUvopUL63F1qSWy9yKkP\nPzdRLRcTz1y+fktpcO/saRfWN6bMFbRtgyQ2+E4w1W2BtKikf2WGUiNbtgcmmq58\nRtBRtAc18/TZhykUANzTRABHF6VK6uF3r9hh1RhP3C56uQ2pxgEjX1G0z+tNuwSR\ns4JhPvWeaqzin91Wfjb+pCBtf2fTiEZZhtZjdV2nSQKBgQDxwcFpQ1l5T0h1C6xp\n3JsclTJ0P8z+eZHhHDwGjn3WF8Up2Z+4xwsxTa9LHqfFi/noUiEVq4zH6fc+XwTW\ndrkO+x6ZIyGOH2mwC/cxVvhJvluFNKrQFabOyoU8YoPHohuUaOhzx1HRVUVhsjE1\nT5VwqgXt7BHeRMJKzU42OSGy+wKBgQC41j0AXCV//Way0ZPkCIlwZTgM2TJ9/gHb\nXcC6pHsUbrinHHVMZ2jReLWTNK2yuDhU0VRo5nR8lTr1OBj+oUBtiqH4umdE+C7p\nG6K4lwODQNsLoYTqOhhpMe4suHn4TSNwVAKMjwvKej5wi7zatME/7n3Vi3JAYnCz\ncO/R4Re+uwKBgQDC8ut0ZssP988GE5PFChBKzEUTWR+FVaM9U/dTkjQHIMPtK4CR\nEHEGIQ7qFJ5VvrqXjSMAxoWP8CtgMF9GUhaI7heOhbXZVZt0SzHap7cwQECs+fuE\nMPGCb+1g9FAv+5kh5DcOpfxkQc7hKUBlLPflEjYV1ffStL+4cjZPo2J5YQKBgF+W\nS424GZyLC2VGhNjUoV8CuW3LlRUbGxK69USQcyYp7ExfpzmP8OEDL8Ok5n8aTedv\nKdvl8i/LbOYL0ME92vfLTeA3ZdiBEKF0rT4QurxR+fWV3grTaHReYfG2pT0Hh2A7\n0eWmxE490bSaT1w7RgUt7N1WdAtf3TCvIxbC9WipAoGBANUPXjpLsf1+XrcDxaLH\n+DywITmwg91UfGOOZ9ZnnjAT4Gw/IQLLt3XVngBC4mgOtvyUZCPD95jHKBzZ0gBV\n349eOf4mKZD2Bku2BZ76AbhA949dNOu3Cxz4daCwCu00upa/zpjSNV90gLurmBDR\nQzHCzxQ+jSDPZ9g4QOEoMMA4\n-----END PRIVATE KEY-----\n",
+  "client_email": "money-380@money-line-python.iam.gserviceaccount.com",
+  "client_id": "114192100380692630876",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/money-380%40money-line-python.iam.gserviceaccount.com"
+}
