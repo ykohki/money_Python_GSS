@@ -55,7 +55,10 @@ def handle_message(event):
     wks = gc.open('money_LINE_python').sheet1
 
     wks.update_acell('A1', 'Hello World!')
-    print(wks.acell('A1'))
+    
+    #練習
+    #入力された情報を返してみる
+    line_bot_api.reply_message(event)
 
 
 if __name__ == "__main__":
