@@ -56,6 +56,8 @@ def handle_message(event):
 
     wks.update_acell('A1', 'Hello World!')
     
+    wks.update_acell('A2', event)
+    
     #練習
     #入力された情報を返してみる
     line_bot_api.reply_message(
