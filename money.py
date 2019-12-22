@@ -66,6 +66,8 @@ def handle_message(event):
     
     gc = gspread.authorize(credentials)
     text = event.message.text
+    #全角スペースを半角スペースに対応
+    text = text.replace("　", " ")
 
     #項目、内容、金額に分ける
     genre = text.split(" ")[0]
