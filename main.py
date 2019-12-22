@@ -64,6 +64,8 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text=event))
 
+    #日付を取得
+    wks.update_acell('A3', event.postback.params['date'])
 
 if __name__ == "__main__":
 #    app.run()
