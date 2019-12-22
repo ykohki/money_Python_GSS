@@ -62,7 +62,7 @@ def handle_message(event):
     #入力された情報を返してみる
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text=event))
+        TextSendMessage(text=event.postback.params['date']))
 
     #日付を取得
     wks.update_acell('A3', event.postback.params['date'])
