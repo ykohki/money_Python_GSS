@@ -140,7 +140,7 @@ def handle_message(event):
         cell_money = wks.cell(row+4, col+1).value
         wks.update_cell(row+4, col+2, sum([int(i) for i in cell_money.splitlines()]))
         
-    elif genre=="趣味":
+    elif genre=="遊び":
         #詳細
         cell_value_what = wks.cell(row+5, col).value
         #金額
@@ -152,8 +152,8 @@ def handle_message(event):
         #金額の合計
         cell_money = wks.cell(row+5, col+1).value
         wks.update_cell(row+5, col+2, sum([int(i) for i in cell_money.splitlines()]))
-
-    elif genre=="その他":
+        
+    elif genre=="趣味":
         #詳細
         cell_value_what = wks.cell(row+6, col).value
         #金額
@@ -165,6 +165,19 @@ def handle_message(event):
         #金額の合計
         cell_money = wks.cell(row+6, col+1).value
         wks.update_cell(row+6, col+2, sum([int(i) for i in cell_money.splitlines()]))
+
+    elif genre=="その他":
+        #詳細
+        cell_value_what = wks.cell(row+7, col).value
+        #金額
+        cell_value_money = wks.cell(row+7, col+1).value
+
+        wks.update_cell(row+7, col, cell_value_what+"\n"+what)
+        wks.update_cell(row+7, col+1, cell_value_money+"\n"+money) 
+        
+        #金額の合計
+        cell_money = wks.cell(row+7, col+1).value
+        wks.update_cell(row+7, col+2, sum([int(i) for i in cell_money.splitlines()]))
 
     #書き込みが終了したら、LINEで返す
     line_bot_api.reply_message(
