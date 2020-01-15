@@ -16,12 +16,13 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 app = Flask(__name__)
 
-#環境変数取得
+# 環境変数取得
 YOUR_CHANNEL_ACCESS_TOKEN = os.environ["YOUR_CHANNEL_ACCESS_TOKEN"]
 YOUR_CHANNEL_SECRET = os.environ["YOUR_CHANNEL_SECRET"]
 
 line_bot_api = LineBotApi(YOUR_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(YOUR_CHANNEL_SECRET)
+
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -43,31 +44,33 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-#    line_bot_api.reply_message(
-#        event.reply_token,
-#        TextSendMessage(text=event.message.text))
+    #    line_bot_api.reply_message(
+    #        event.reply_token,
+    #        TextSendMessage(text=event.message.text))
 
     scope = ['https://spreadsheets.google.com/feeds',
-            'https://www.googleapis.com/auth/drive']
+             'https://www.googleapis.com/auth/drive']
 
-    credentials = ServiceAccountCredentials.from_json_keyfile_name('money-line-python-638e48c935e8.json', scope)
+    credentials = ServiceAccountCredentials.from_json_keyfile_name(
+        'money-line-python-638e48c935e8.json', scope)
     gc = gspread.authorize(credentials)
     wks = gc.open('money_LINE_python').sheet1
 
     wks.update_acell('A1', 'Hello World!')
-    
+
     wks.update_acell('A2', event.message.text)
-    
-    #練習
-    #入力された情報を返してみる
+
+    # 練習
+    # 入力された情報を返してみる
     line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=event.postback.params['date']))
 
-    #日付を取得
+    # 日付を取得
     wks.update_acell('A3', event.postback.params['date'])
 
+
 if __name__ == "__main__":
-#    app.run()
+    #    app.run()
     port = int(os.getenv("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
