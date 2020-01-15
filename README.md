@@ -1,4 +1,4 @@
-# money_Python_GSS
+# money_Python_GSS  [![Build Status](https://travis-ci.org/ykohki/money_Python_GSS.svg?branch=master)](https://travis-ci.org/ykohki/money_Python_GSS)
 
 Python×LINEbot×GSSのカスタマイズ自由な家計簿botです。
 
